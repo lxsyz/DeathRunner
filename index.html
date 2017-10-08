@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Amanda sister</title>
+
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+</head>
+
+<body>
+
+<div id="mainDiv">
+	<div id="content">
+		<div id="photoWall">
+			<img src="img/1.jpg" width="300" height="220">
+			<img src="img/2.jpg" width="300" height="220">
+			<img src="img/3.jpg" width="300" height="220">
+			<img src="img/4.jpg" width="300" height="220">
+			<img src="img/5.jpg" width="300" height="220">
+			<img src="img/6.jpg" width="300" height="220">
+			<img src="img/7.jpg" width="300" height="220">
+			<img src="img/8.jpg" width="300" height="220">
+			
+		</div>
+		<div id="code">
+			<span class="comments">/**</span><br />
+			<span class="space"/><span class="comments">*1997—10-13,</span><br />
+			<span class="space"/><span class="comments">*1996-05-19.</span><br />
+			<span class="space"/><span class="comments">*/</span><br />
+			Boy boy = <span class="keyword">new Boy("Zhao ge");</span> <br />
+			Girl girl = <span class="keyword">new Girl("Amanda");</span> <br />
+
+			<span class="comments">//上学</span><br />
+			boy.goToUniversity();	<br />
+			year = year + 2;	<br/>
+			girl.goToUniversity();<br />
+
+			<span class="comments">//相遇</span><br />
+			boy.becomeAssistant();<br />
+			while (boy.isAssistant()) {<br />
+			<span class="space"/>girl.askQuestion();<br />
+			<span class="space"/>eatTogether();<br/>
+			<span class="space"/>watchMovie();<br/>
+			<span class="space"/>play();<br/>
+			<span class="space"/>.<br/>
+			<span class="space"/>.<br/>
+			<span class="space"/>.<br/>
+			}<br/>
+			<span class="comments">//恋爱</span><br />
+			try {<br/>
+				<span class="space"/>boy.sayLove();<br/>
+				<span class="space"/>girl.think();<br/>
+			} catch(Exception e) {<br/>	
+			} finally{<br/>
+				<span class="space"/>girl.agree();<br/>
+			}<br/>
+			<span class="comments">//love forever</span><br />
+			while (inLove()=true) {<br/>
+			<span class="space"/>laugh();<br/>
+			<span class="space"/>happy();<br/>
+			<span class="space"/>struggle();<br/>
+			}
+			
+			<br>
+			<br>
+			I want to say:<br />
+			Baby, Happy birthday!I love you forever;<br />
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					傻曼妹妹，这是我们相爱在一起的时光。
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					生日快乐，永远18岁。<br/>
+					<div class="signature">--爱你的钊钊哥哥</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(2016, 6, 9);
+together.setHours(20);
+together.setMinutes(0);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
+</body>
+</html>

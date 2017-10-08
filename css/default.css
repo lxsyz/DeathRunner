@@ -14,6 +14,54 @@
 #code .keyword{color:#7f0055;font-weight:bold}
 #code .placeholder{margin-left:15px}#code .space{margin-left:7px}
 #code .comments{color:#3f7f5f}
-#copyright{margin-top:10px;text-align:center;width:100%;color:#666}
+
+
+img{opacity:0.5;}
+#photoWall{
+	z-index:-1
+	margin:0 auto;
+	width: 80%;
+	height: 80%;
+	position: absolute; /*绝对定位*/
+	top: 40%;
+	left: 55%;
+	transform:translate(-50%,-50%);/*移动 */
+	display: -webkit-box; /*使用CSS3的盒模型之流式布局*/ 
+    display: -moz-box; 
+    display: box; 
+    -webkit-box-pack:center; /*定义盒模型内部元素在水平方向上居于中间位置*/ 
+    -moz-box-pack:center; 
+    -o-box-pack:center; 
+    -ms-box-pack:center; 
+    box-pack:center; 
+}
+#photoWall img{
+width:160px;
+height: 260px;
+margin:20px;
+border:10px solid #fff;
+box-shadow: 0px 4px 3px #ccc;
+}
+#photoWall img:nth-of-type(1),
+#photoWall img:nth-of-type(5){
+transform: rotate(5deg);
+}
+#photoWall img:nth-of-type(2),
+#photoWall img:nth-of-type(6){
+transform:rotate(-3deg);
+}
+#photoWall img:nth-of-type(3),
+#photoWall img:nth-of-type(8){
+transform:rotate(2deg);
+}
+#photoWall img:nth-of-type(4),
+#photoWall img:nth-of-type(7){
+transform:rotate(-7deg);
+}
+#photoWall img:hover{
+transform:rotate(0deg);
+transform: scale(1.1);
+}
+
 #errorMsg{width:100%;text-align:center;font-size:24px;position:absolute;top:100px;left:0}
-#copyright a{color:#666}
+
